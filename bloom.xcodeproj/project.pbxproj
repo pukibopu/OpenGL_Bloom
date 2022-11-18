@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		27B19BF12926248400A7EDD6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27B19BF02926248400A7EDD6 /* main.cpp */; };
+		27B19BF82926249600A7EDD6 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 27B19BF72926249600A7EDD6 /* glad.c */; };
+		27B19BFC292624F600A7EDD6 /* libassimp.5.2.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B19BFA292624F600A7EDD6 /* libassimp.5.2.4.dylib */; };
+		27B19BFD292624F600A7EDD6 /* libassimp.5.2.4.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 27B19BFA292624F600A7EDD6 /* libassimp.5.2.4.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		27B19BFE292624F600A7EDD6 /* libglfw.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B19BFB292624F600A7EDD6 /* libglfw.3.dylib */; };
+		27B19BFF292624F600A7EDD6 /* libglfw.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 27B19BFB292624F600A7EDD6 /* libglfw.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,11 +25,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		27B19C00292624F600A7EDD6 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				27B19BFD292624F600A7EDD6 /* libassimp.5.2.4.dylib in Embed Libraries */,
+				27B19BFF292624F600A7EDD6 /* libglfw.3.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		27B19BED2926248400A7EDD6 /* bloom */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = bloom; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B19BF02926248400A7EDD6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		27B19BF72926249600A7EDD6 /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = glad.c; path = ../../openGL_cpp/libs/glad.c; sourceTree = "<group>"; };
+		27B19BFA292624F600A7EDD6 /* libassimp.5.2.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.5.2.4.dylib; path = ../../openGL_cpp/libs/libassimp.5.2.4.dylib; sourceTree = "<group>"; };
+		27B19BFB292624F600A7EDD6 /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = ../../openGL_cpp/libs/libglfw.3.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27B19BFC292624F600A7EDD6 /* libassimp.5.2.4.dylib in Frameworks */,
+				27B19BFE292624F600A7EDD6 /* libglfw.3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +63,10 @@
 		27B19BE42926248400A7EDD6 = {
 			isa = PBXGroup;
 			children = (
+				27B19BF72926249600A7EDD6 /* glad.c */,
 				27B19BEF2926248400A7EDD6 /* bloom */,
 				27B19BEE2926248400A7EDD6 /* Products */,
+				27B19BF9292624F600A7EDD6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +86,15 @@
 			path = bloom;
 			sourceTree = "<group>";
 		};
+		27B19BF9292624F600A7EDD6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27B19BFA292624F600A7EDD6 /* libassimp.5.2.4.dylib */,
+				27B19BFB292624F600A7EDD6 /* libglfw.3.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -72,6 +105,7 @@
 				27B19BE92926248400A7EDD6 /* Sources */,
 				27B19BEA2926248400A7EDD6 /* Frameworks */,
 				27B19BEB2926248400A7EDD6 /* CopyFiles */,
+				27B19C00292624F600A7EDD6 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -120,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27B19BF12926248400A7EDD6 /* main.cpp in Sources */,
+				27B19BF82926249600A7EDD6 /* glad.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +274,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /Users/j10j0/Desktop/openGL_cpp/include;
+				LIBRARY_SEARCH_PATHS = /Users/j10j0/Desktop/openGL_cpp/libs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -247,6 +284,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /Users/j10j0/Desktop/openGL_cpp/include;
+				LIBRARY_SEARCH_PATHS = /Users/j10j0/Desktop/openGL_cpp/libs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
