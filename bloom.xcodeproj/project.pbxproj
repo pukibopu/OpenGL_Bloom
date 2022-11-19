@@ -45,6 +45,12 @@
 		27B19BF72926249600A7EDD6 /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = glad.c; path = ../../openGL_cpp/libs/glad.c; sourceTree = "<group>"; };
 		27B19BFA292624F600A7EDD6 /* libassimp.5.2.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.5.2.4.dylib; path = ../../openGL_cpp/libs/libassimp.5.2.4.dylib; sourceTree = "<group>"; };
 		27B19BFB292624F600A7EDD6 /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = ../../openGL_cpp/libs/libglfw.3.dylib; sourceTree = "<group>"; };
+		27EF502C2927C56500A7EAE8 /* vShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = vShader.glsl; sourceTree = "<group>"; };
+		27EF502D2927C6E500A7EAE8 /* fShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = fShader.glsl; sourceTree = "<group>"; };
+		27EF502E2927CDEF00A7EAE8 /* fLightShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = fLightShader.glsl; sourceTree = "<group>"; };
+		27EF502F2927CEB700A7EAE8 /* vBlurShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = vBlurShader.glsl; sourceTree = "<group>"; };
+		27EF50302927CF3000A7EAE8 /* fBlurShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = fBlurShader.glsl; sourceTree = "<group>"; };
+		27EF5031292877E900A7EAE8 /* mixFShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = mixFShader.glsl; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 		27B19BEF2926248400A7EDD6 /* bloom */ = {
 			isa = PBXGroup;
 			children = (
+				27EF502B2927C55300A7EAE8 /* shaders */,
 				27B19BF02926248400A7EDD6 /* main.cpp */,
 			);
 			path = bloom;
@@ -93,6 +100,19 @@
 				27B19BFB292624F600A7EDD6 /* libglfw.3.dylib */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		27EF502B2927C55300A7EAE8 /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				27EF502C2927C56500A7EAE8 /* vShader.glsl */,
+				27EF502D2927C6E500A7EAE8 /* fShader.glsl */,
+				27EF502E2927CDEF00A7EAE8 /* fLightShader.glsl */,
+				27EF502F2927CEB700A7EAE8 /* vBlurShader.glsl */,
+				27EF50302927CF3000A7EAE8 /* fBlurShader.glsl */,
+				27EF5031292877E900A7EAE8 /* mixFShader.glsl */,
+			);
+			path = shaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

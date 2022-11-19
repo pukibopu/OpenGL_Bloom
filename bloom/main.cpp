@@ -74,6 +74,11 @@ int main(int argc, const char * argv[]) {
     
     glEnable(GL_DEPTH_TEST);
     
+    Shader shader("shaders/vShader.glsl","shaders/fShader.glsl");
+    Shader shaderLight("shaders/vShader.glsl","shaders/fShader.glsl");
+    Shader shaderBlur("shaders/vBlurShader.glsl","shaders/fBlurShader.glsl");
+    Shader shaderBloom("shaders/vBlurShader.glsl","shaders/mixFShader.glsl");
+    
     
     while(!glfwWindowShouldClose(window)){
         
